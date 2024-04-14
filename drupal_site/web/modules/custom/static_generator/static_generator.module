@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\Core\Routing\RouteSubscriberBase;
+use Symfony\Component\Routing\RouteCollection;
+
+/**
+ * Listens to the dynamic route events.
+ */
+class StaticGeneratorRouteSubscriber extends RouteSubscriberBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function alterRoutes(RouteCollection $collection) {
+    // Logic to alter routes for static generation.
+  }
+
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function static_generator_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Alter forms if necessary.
+}

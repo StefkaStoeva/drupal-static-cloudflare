@@ -1,7 +1,172 @@
-*
-!.devcontainer/
-!.devcontainer/php.ini
-!.gitignore
-!.vsls.json
-!LICENCE
-!README.md
+# Ignore configuration files that may contain sensitive information.
+local.settings.php
+local.drush.yml
+local.site.yml
+local.services.yml
+tests/behat/local.yml
+box/local.config.yml
+*.local
+local.blt.yml
+
+# Adjusted to ignore Drupal core in the web directory instead of docroot.
+/web/core
+
+# Ignore robots.txt in the web directory.
+/web/robots.txt
+
+# Ignore paths that contain user-generated content in the web directory.
+/web/sites/*/files
+/files-private
+/web/sites/*/private
+
+# Ignore contrib modules, themes, profiles, and libraries in the web directory.
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+/web/libraries
+
+drush/Commands
+
+# Ignore shared scripts directory
+shared-scripts
+
+# Ignore static generated HTML.
+files
+html
+content
+storage
+webform-exports
+
+# Ignore custom theme build artifacts in the web directory.
+/web/themes/custom/**/node_modules
+!/web/themes/custom/**/templates/content
+!/web/sites/**/templates/content
+
+# Ignore build artifacts
+deployment_identifier
+/deploy
+bin/*
+tmp
+reports
+
+# OS X system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Eclipse
+*.pydevproject
+.project
+.metadata
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# Ignore local storage for the dynamoDB.
+.docksal/etc/aws-dynamo/data
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+# Emacs
+*~
+#*#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.#*
+
+# User-specific IDE configs
+.idea/
+.vscode/
+
+# XHProf
+xhprof_*
+
+# Composer vendor directory
+vendor/
+vendor/.git
+
+# Sass cache
+.sass-cache
+*.css.map
+
+# Netbeans IDE
+nbproject
+nbproject/*
+
+# DrupalVM
+.vagrant/
+
+# DevDesktop
+*.dd
+
+# Exports
+*.gz
+*.sql
+*.zip
+
+# PHPStorm
+atlassian-ide-plugin.xml
+
+# NPM logs
+npm-debug.log
+
+# Drush 9 Checksums
+drush/sites/.checksums
+
+# Deprecation detector rules
+.rules
+
+# Behat
+tests/behat/report/
+tests/behat/screenshots/
+
+# BLT updates for simulated deploys
+/travis_wait*
+
+# Drupal VM dashboard
+dashboard
+
+# Exclude local Lando config file
+.lando.local.yml
+
+# Exclude doctrine cache dir
+doctrine_cache
+
+/node_modules

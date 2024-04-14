@@ -1,0 +1,7 @@
+name: 'Static Generator'
+type: module
+description: 'Generates static HTML pages.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:node
