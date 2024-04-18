@@ -15,7 +15,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'  # Check for the required PHP version for Drupal
+        php-version: '8.1'  # Check for the required PHP version for Drupal
 
     - name: Generate Static HTML
       run: php scripts/generate_static_html.php  # This script should be implemented to generate static HTML
