@@ -1,0 +1,7 @@
+static_generator.static:
+  path: '/admin/static-generator'
+  defaults:
+    _form: 'Drupal\static_generator\Form\StaticGeneratorForm'
+    _title: 'Static Generation'
+  requirements:
+    _permission: 'administer site configuration'
