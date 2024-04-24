@@ -1,7 +1,14 @@
 static_generator.static:
-  path: '/admin/static-generator'
+  path: '/admin/config/system/static/static-generator'
   defaults:
-    _form: 'Drupal\static_generator\Form\StaticGeneratorForm'
+    _form: 'Drupal\static_generator\Form\StaticGenerationForm'
     _title: 'Static Generation'
+  requirements:
+    _permission: 'administer site configuration'
+static_generator.publish_to_cloudflare:
+  path: '/admin/config/system/static/static-publish'
+  defaults:
+    _controller: '\Drupal\static_generator\Controller\StaticPublishController::publish'
+    _title: 'Publish to Cloudflare'
   requirements:
     _permission: 'administer site configuration'
