@@ -24,6 +24,7 @@ local.blt.yml
 /web/themes/contrib
 /web/profiles/contrib
 /web/libraries
+contrib
 
 drush/Commands
 
@@ -129,9 +130,6 @@ vendor/.git
 # Netbeans IDE
 nbproject
 nbproject/*
-
-# DrupalVM
-.vagrant/
 
 # DevDesktop
 *.dd

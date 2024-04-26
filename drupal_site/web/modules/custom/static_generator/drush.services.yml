@@ -1,0 +1,8 @@
+services:
+  static_generator.static_deploy_command:
+      class: Drupal\static_generator\Commands\StaticDeployCommand
+      tags:
+        - { name: drush.command }
+      arguments:
+        - '@config.factory'
+        - '@messenger'

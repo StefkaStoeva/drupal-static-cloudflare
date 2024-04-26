@@ -1,0 +1,16 @@
+static_generator.main:
+  route_name: static_generator.main
+  parent: system.admin_config
+  title: 'Static Sync Cloudflare'
+static_generator.configure:
+  title: 'Cloudflare Configuration'
+  parent: static_generator.main
+  description: 'Configure Cloudflare keys to sync static generated content with Cloudflare.'
+  route_name: static_generator.configure
+  weight: 0
+static_generator.static:
+  title: 'Cloudflare Static'
+  parent: static_generator.main
+  description: 'Generate static content and deploy to Cloudflare Pages.'
+  route_name: static_generator.static
+  weight: 1

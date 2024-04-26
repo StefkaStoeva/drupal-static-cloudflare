@@ -31,9 +31,3 @@ function static_generator_toolbar() {
   return $items;
 }
 
-/**
- * Implements hook_form_alter().
- */
-function static_generator_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  // Alter forms if necessary.
-}
